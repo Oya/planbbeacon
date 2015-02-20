@@ -14,6 +14,10 @@ $(document).ready(function(){
 
 });
 
+
+
+
+
 var logToDom = function (message) {
     var e = document.createElement('label');
     e.innerText = message;
@@ -43,14 +47,15 @@ delegate.didStartMonitoringForRegion = function (pluginResult) {
     logToDom('didStartMonitoringForRegion:' + JSON.stringify(pluginResult));
 };
 
-delegate.didRangeBeaconsInRegion: function (pluginResult) {
+delegate.didRangeBeaconsInRegion = function (pluginResult) {
     logToDom('[DOM] didRangeBeaconsInRegion: ' + JSON.stringify(pluginResult));
 };
 
+
 var uuid = 'E2C56DB5-DFFB-48D2-B060-D0F5A71096E0';
 var identifier = 'Apple AirLocate E2C56DB5';
-//var minor = 1000;
-//var major = 5;
+var minor = 0;
+var major = 0;
 var beaconRegion = new cordova.plugins.locationManager.BeaconRegion(identifier, uuid, major, minor);
 
 cordova.plugins.locationManager.setDelegate(delegate);
@@ -59,6 +64,6 @@ cordova.plugins.locationManager.setDelegate(delegate);
 cordova.plugins.locationManager.requestWhenInUseAuthorization(); 
 // or cordova.plugins.locationManager.requestAlwaysAuthorization()
 
-cordova.plugins.locationManager.startMonitoringForRegion(beaconRegion)
+cordova.plugins.locationManager.startRangingBeaconsInRegion(beaconRegion)
     .fail(console.error)
     .done();
