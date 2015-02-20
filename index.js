@@ -53,7 +53,7 @@ delegate.didRangeBeaconsInRegion = function (pluginResult) {
 
 
 var uuid = 'E2C56DB5-DFFB-48D2-B060-D0F5A71096E0';
-var identifier = 'Apple AirLocate E2C56DB5';
+var identifier = 'MiniBeacon_00719';
 var minor = 0;
 var major = 0;
 var beaconRegion = new cordova.plugins.locationManager.BeaconRegion(identifier, uuid, major, minor);
