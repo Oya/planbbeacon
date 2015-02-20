@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "ibeacon.planb.com"
+        version     = "0.0.1" >
+
+
+    <name>iBeacon Example</name>
+
+    <description>
+        An example for ibeacon 
+    </description>
+
+    <author href="https://www.planb.com.br" email="dev@planb.com.br">
+        Plan B
+    </author>
+
+    <feature name="http://api.phonegap.com/1.0/device" />
+
+    <gap:plugin name="com.unarin.cordova.beacon" version="3.2.1" />
+</widget>
